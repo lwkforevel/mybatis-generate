@@ -7,7 +7,7 @@
 	<context id="zrh" targetRuntime="MyBatis3">
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
 			connectionURL="jdbc:mysql://localhost/zrh" userId="root"
-			password="root">
+			password="">
 		</jdbcConnection>
 
 		<javaTypeResolver>
@@ -30,27 +30,31 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-		<table tableName="action" domainObjectName="Action"
+		<table tableName="actions" domainObjectName="Actions"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
-		<table tableName="left-menu" domainObjectName="Left_menu"
+		<table tableName="menu" domainObjectName="Menu"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
-		<table tableName="left_menu_action"
-			domainObjectName="Left_menu_action" enableCountByExample="false"
+		<table tableName="action_permission"
+			domainObjectName="Action_permission" enableCountByExample="false"
 			enableUpdateByExample="false" enableDeleteByExample="false"
 			enableSelectByExample="false" selectByExampleQueryId="false"></table>
-		<table tableName="menu_floor" domainObjectName="Menu_floor"
+		<table tableName="role" domainObjectName="Role"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
-		<table tableName="permission_left_menu_role"
-			domainObjectName="Permission_left_menu_role"
+		<table tableName="role_action_permission"
+			domainObjectName="Role_action_permission"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>
-
+		<table tableName="role_menu"
+			domainObjectName="Role_menu"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
 	</context>
 </generatorConfiguration>
